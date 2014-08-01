@@ -5,7 +5,7 @@
   "main": "vnt.js",
   "scripts": {
     "preinstall": "./node_modules/.bin/coffee -c vnt.coffee",
-    "test": ""
+    "test": "npm i && ./node_modules/.bin/mocha --reporter spec --bail ./test/*"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/zzmp/vnt",
   "dependencies": {
-    "coffee-script": "^1.7.1"
+    "coffee-script": "^1.7.1",
+    "mocha": "^1.21.3",
+    "should": "^4.0.4"
   }
 }

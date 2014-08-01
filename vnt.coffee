@@ -1,11 +1,15 @@
-EventEmitter = (require 'events').EventEmitter
+module.exports.EventEmitter = EventEmitter = (require 'events').EventEmitter
 
 class Event
   constructor: (@parent, @name) ->
-    for fn of EventEmitter.prototype
-      if fn is not 'setMaxListeners'
-        @[fn] = (args...) ->
-          @parent[fn] @name args
+    for fn in [
+      'emit', 'addListener', 'on', 'once',
+      'removeListener', 'removeAllListeners', 'listeners']
+      @[fn] = ((fn) -> (args...) ->
+        @parent[fn].apply @parent, [@name].concat args)(fn)
 
 EventEmitter.prototype.event = (event) ->
-  new Event(@, event)
+  if event?
+    new Event(@, event)
+  else
+    throw Error('No event name given')
