@@ -23,7 +23,7 @@ var EventEmitter = require('vnt').EventEmitter;
 
 ---
 
-All that's left to do is free your events:
+All that's left to do is to free your events:
 
 ```js
 var obj = new EventEmitter();
@@ -36,34 +36,34 @@ Any valid function from `EventEmitter` that targets an event is fair game:
 
 ##### .emit
 
-`changeEvent.emit()`
+Emit an event with `changeEvent.emit()`
 
-##### .addListener
+##### .addListener / .on
 
-`changeEvent.addListener(fn)`
-
-##### .on
-
-`changeEvent.on(fn)`
+Add a new listener with `changeEvent.addListener(fn)`
 
 ##### .once
 
-`changeEvent.once(fn)`
+Add a one-time listener with `changeEvent.once(fn)`
 
 ##### .removeListener
 
-`changeEvent.removeListener(fn)`
+Remove a listener with `changeEvent.removeListener(fn)`
 
 ##### .removeAllListeners
 
-`changeEvent.removeAllListeners()`
+Remove all listeners with `changeEvent.removeAllListeners()`
 
 ##### .listeners
 
-`changeEvent.listeners()`
+Retrieve an array of listeners with `changeEvent.listeners()`
 
 ---
 
 Feel free to contribute. The tests are their own beast, and convergence with the **node.js** specs would be sublime.
+
+---
+
+Want asynchronous eventing? Check out [`pwn`](https://www.npmjs.org/package/pwn).
 
 _[@zzmp](https://www.github.com/zzmp)_
