@@ -10,6 +10,7 @@ class Event
 
 EventEmitter.prototype.event = (event) ->
   if event?
-    new Event(@, event)
+    @_vnts ?= {}
+    @_vnts[event] ?= new Event(@, event)
   else
     throw Error('No event name given')

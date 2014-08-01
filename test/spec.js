@@ -29,7 +29,7 @@ describe('EventEmitter', function() {
       // ...then it's a duck.
     
     });
-    xit('should return the same Event if called twice', function() {
+    it('should return the same Event if called twice', function() {
       eventOne = em.event('event');
       eventTwo = em.event('event');
       eventOne.should.equal(eventTwo);
