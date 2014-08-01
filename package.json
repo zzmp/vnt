@@ -1,0 +1,31 @@
+{
+  "name": "vnt",
+  "version": "0.0.0",
+  "description": "Take events out of your EventEmitter",
+  "main": "vnt.js",
+  "scripts": {
+    "preinstall": "./node_modules/.bin/coffee -c vnt.coffee",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zzmp/vnt.git"
+  },
+  "keywords": [
+    "event",
+    "first",
+    "class",
+    "citizen",
+    "extract",
+    "EventEmitter"
+  ],
+  "author": "Zach Pomerantz <zmp@umich.edu> (http://garabagne.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzmp/vnt/issues"
+  },
+  "homepage": "https://github.com/zzmp/vnt",
+  "dependencies": {
+    "coffee-script": "^1.7.1"
+  }
+}
